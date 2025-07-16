@@ -1,0 +1,19 @@
+name: Deploy From Port
+
+on:
+  workflow_dispatch:
+    inputs:
+      portRunId:
+        description: 'Run ID from Port'
+        required: true
+      environment:
+        description: 'Deployment Environment'
+        required: true
+        default: 'staging'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Port Run
+        run: echo "Triggered by Port run ${{ github.event.inputs.portRunId }} to ${{ github.event.inputs.environment }}"
