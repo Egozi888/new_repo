@@ -18,6 +18,7 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    environment: requires-approval
     steps:
       - name: Echo Port Run
         run: echo "Triggered by Port run ${{ github.event.inputs.portRunId }} to ${{ github.event.inputs.environment }}"
