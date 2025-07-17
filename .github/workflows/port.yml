@@ -22,5 +22,4 @@ jobs:
       - name: Echo Port Run
         run: echo "Triggered by Port run ${{ github.event.inputs.portRunId }} to ${{ github.event.inputs.environment }}"
 
-      - name: Call dead endpoint
-        run: curl http://10.255.255.1
+
